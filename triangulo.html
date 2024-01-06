@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="jumbotron">
+  <h1 class="text-center">TRIÁNGULO</h1>
+  <p class="text-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Triangle.Equilateral.svg/250px-Triangle.Equilateral.svg.png" width="350" height="250" class="mx-auto" alt="Placeholder image"><br>Los triángulos son los polígonos con menos lados que pueden existir. Todos los triángulos tienen 3 lados, 3 vértices y 3 ángulos interiores. </p>
+  <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">ATRÁS</a></p>
+  
+  <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 1</span>
+            <input id="lado1" type="text" class="form-control" placeholder="Escribe el lado 1 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 2</span>
+            <input id="lado2" type="text" class="form-control" placeholder="Escribe el lado 2 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 3</span>
+            <input id="lado3" type="text" class="form-control" placeholder="Escribe el lado 3 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div><br>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">CALCULAR</button>
+          <h2 id="area">Área:</h2>
+          <h2 id="perimetro">Perímetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var lado1 = parseFloat(document.getElementById("lado1").value);
+            var lado2 = parseFloat(document.getElementById("lado2").value);
+            var lado3 = parseFloat(document.getElementById("lado3").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = lado1+lado2+lado3;
+            var s = (lado1+lado2+lado3)/2;
+            var area = Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3));
+            h2area.innerText = "Área: "+area;
+            h2perimetro.innerText = "Perímetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>

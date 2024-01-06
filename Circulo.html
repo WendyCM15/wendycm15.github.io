@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="jumbotron">
+  <h1  class="text-center">CÍRCULO</h1>
+  <p  class="text-center"><img src="https://www.neurochispas.com/wp-content/uploads/2021/03/radio-de-un-circulo.png" width="270" height="250" class="mx-auto" alt="Placeholder image"><br>Es una figura plana limitada por una circunferencia. Está formado por la circunferencia y la parte de plano que hay dentro de ella. </p>
+  <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">ATRÁS</a></p>
+  
+  <div>
+    <div class="input-group input-group-lg"><span id="addon1" class="input-group-addon">Radio:</span>
+      <input id="radio" type="text" class="form-control" placeholder="Escribe un radio" aria-describedby="addon1">
+    </div><br>
+    
+   <button onClick="calcular()"type="button" class="btn btn-lg btn-success btn-block">CALCULAR</button>
+   <h2 id="area">Área:</h2>
+   <h2 id="perimetro">Perímetro:</h2>
+   <h2 id="diametro">Diametro:</h2>
+  </div>
+  
+</div>
+<script>
+	function calcular(){
+	  var radio=parseFloat(document.getElementById("radio").value);
+	  var diametro=2*radio
+	  var perimetro=3.1416*diametro;
+	  var area=3.1416*radio*radio;
+	  var h2area=document.getElementById("area");
+	  var h2perimetro=document.getElementById("perimetro");
+	  var h2diametro=document.getElementById("diametro");
+	  h2area.innerText="Área:"+area;
+	  h2perimetro.innerText="Perímetro:"+perimetro;
+	  h2diametro.innerText="Diametro:"+diametro;
+  
+	}
+	</script>
+
+
+
+</body>
+</html>

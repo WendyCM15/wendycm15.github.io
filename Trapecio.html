@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<body>
+<div class="jumbotron">
+  <h1 class="text-center">TRAPECIO</h1>
+  <p class="text-center"><img src="https://enciclopediadematematica.com/wp-content/uploads/2022/08/figura-1-5.png"width="450" height="250" class="mx-auto" alt="Placeholder image"><br> Los trapecios son cuadriláteros con dos lados paralelos y otros dos no paralelos. Se llaman bases a los lados paralelos y altura a la distancia entre las bases. </p>
+  <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">ATRÁS</a></p>
+  
+  <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Base Mayor</span>
+            <input id="basemayor" type="text" class="form-control" placeholder="Escribe la base mayor: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Base menor</span>
+            <input id="basemenor" type="text" class="form-control" placeholder="Escribe la base menor : 5" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Altura</span>
+            <input id="altura" type="text" class="form-control" placeholder="Escribe la altura: 20" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado</span>
+            <input id="lado" type="text" class="form-control" placeholder="Escribe el lado: 10" aria-describedby="sizing-addon1">
+          </div><br>
+  <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Área:</h2>
+          <h2 id="perimetro">Perímetro:</h2>
+</div>
+	<script >
+        function calcular() {
+            var basemayor = parseFloat(document.getElementById("basemayor").value);
+            var basemenor = parseFloat(document.getElementById("basemenor").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var lado = parseFloat(document.getElementById("lado").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = basemayor+basemenor+lado+lado;
+            var area = ((basemayor+basemenor)/2)*altura;
+            h2area.innerText = "Área: "+area;
+            h2perimetro.innerText = "Perímetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>

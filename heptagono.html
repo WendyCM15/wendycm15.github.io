@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="jumbotron">
+  <h1  class="text-center">HEPTÁGONO</h1>
+  <p  class="text-center"><img src="https://www.neurochispas.com/wp-content/uploads/2021/03/diagrama-de-heptagono-con-apotema-y-longitud-de-un-lado.png" width="270" height="250" class="mx-auto" alt="Placeholder image"> <br>
+   El heptágono es una figura geométrica formada por siete lados, además que tiene siete vértices y siete ángulos interiores. </p>
+  <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">ATRÁS</a></p>
+  
+  <div>
+    <div class="input-group input-group-lg"><span id="addon1" class="input-group-addon">Lado:</span>         
+    <input id="lado" type="text" class="form-control" placeholder="Escribe un lado" aria-describedby="addon1"> 
+    </div><br>
+    
+    <div class="input-group input-group-lg"><span id="addon2" class="input-group-addon">Apotema:</span>
+      <input id="apotema" type="text" class="form-control" placeholder="Escribe un apotema" aria-describedby="addon2">
+    </div><br>
+    
+   <button OnClick="calcular()"type="button" class="btn btn-lg btn-success btn-block">CALCULAR</button>
+   <h2 id="area">Área:</h2>
+	  <h2 id="perimetro">Perímetro:</h2>
+  </div>
+  
+</div>
+<script>
+  function calcular() {
+	  var lado=document.getElementById("lado").value;
+      var apotema=document.getElementById("apotema").value;
+	  var perimetro=parseFloat(lado)*7;
+	  var area=parseFloat(perimetro)*parseFloat(apotema)/2;
+      var h2area=document.getElementById("area");
+	  var h2perimetro=document.getElementById("perimetro");
+	  h2area.innerText="Área:"+area;
+	  h2perimetro.innerText="Perímetro:"+perimetro;
+  }
+  </script>
+
+</body>
+</html>

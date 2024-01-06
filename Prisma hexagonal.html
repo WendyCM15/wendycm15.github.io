@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1 class="text-center">PRISMA HEXAGONAL</h1>
+                    <p>El prisma hexagonal es aquel poliedro constituido por dos caras que son hexágonos, además de seis caras laterales que son paralelogramos.</p>
+                    <img src="https://www.neurochispas.com/wp-content/uploads/2021/04/elementos-de-un-prisma-hexagonal.png" class="center-block" width="300" height="300" alt="" srcset=""><br>
+                    <a href="poliedros.html" class="btn btn-lg btn-info btn-block">Atrás</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">lado</span>
+                    <input id="lado" type="text" class="form-control" placeholder="Escribe un lado ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div>
+                  <br>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">altura</span>
+                    <input id="altura" type="text" class="form-control" placeholder="Escribe una altura ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div>
+                  <br>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">apotema</span>
+                    <input id="apotema" type="text" class="form-control" placeholder="Escribe un apotema ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div><br>
+                  <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+                  <h2 id="area">Área:</h2>
+                  <h2 id="volumen">Volumen:</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calcular() {
+            var altura = parseFloat(document.getElementById("altura").value);
+            var lado = parseFloat(document.getElementById("lado").value);
+            var apotema = parseFloat(document.getElementById("apotema").value);
+            var h2area = document.getElementById("area");
+            var h2volumen = document.getElementById("volumen");
+            var perimetro = 6 * lado;
+            var area = 6 * lado * (apotema + altura);
+            var volumen = (perimetro * apotema / 2) *altura;
+            h2area.innerText = "Área: " + area;
+            h2volumen.innerText = "Volumen: " + volumen;
+        }
+        </script>
+</body>
+</html>

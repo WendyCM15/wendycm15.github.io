@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<body>
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1 class="text-center">CONO</h1>
+                    <p>Un cono recto es un sólido de revolución generado por el giro de un triángulo rectángulo alrededor de uno de sus catetos. Al círculo conformado por el otro cateto se denomina base y al punto donde confluyen las generatrices se llama vértice.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cone.png/800px-Cone.png" class="center-block" width="300" height="300" alt="" srcset=""><br>
+                    <a href="poliedros.html" class="btn btn-lg btn-info btn-block">Atrás</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">radio</span>
+                    <input id="radio" type="text" class="form-control" placeholder="Escribe un radio ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div>
+                  <br>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">altura</span>
+                    <input id="altura" type="text" class="form-control" placeholder="Escribe una altura ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div>
+                  <br>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">g</span>
+                    <input id="g" type="text" class="form-control" placeholder="Escribe un (g) ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div><br>
+                  <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+                  <h2 id="area">Área:</h2>
+                  <h2 id="volumen">Volumen:</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calcular() {
+            var radio = parseFloat(document.getElementById("radio").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var g = parseFloat(document.getElementById("g").value);
+            var harea = document.getElementById("area");
+            var h2volumen = document.getElementById("volumen");
+            
+            var area = Math.PI * (radio * g + radio * radio);
+            var volumen = (1/3) * Math.PI * radio * radio * altura;
+        
+            harea.innerText = "Área: " + area;
+            h2volumen.innerText = "Volumen: " + volumen;
+        }
+        </script>
+</body>
+</html>

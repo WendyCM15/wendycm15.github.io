@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+
+<body>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1 class="text-center">ESFERA</h1>
+                    <p>La esfera (superficie esférica) es el conjunto de los puntos del espacio tridimensional que tienen la misma distancia a un punto fijo denominado centro; tanto el segmento que une un punto con el centro, como la longitud del segmento, se denomina radio</p>
+                    <img src="https://calculo.cc/temas/temas_geometria/ar_vol_cuer_geo/imagenes/teoria/esfera/t_1_1.gif" class="center-block" width="350" height="350" alt="" srcset=""><br>
+                    <a href="poliedros.html" class="btn btn-lg btn-info btn-block">Atrás</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">Radio</span>
+                    <input id="radio" type="text" class="form-control" placeholder="Escribe un radio ejemplo: 10" aria-describedby="sizing-addon1">
+                  </div>
+                  <br>
+                  <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+                  <h2 id="area">Área:</h2>
+                  <h2 id="volumen">Volumen:</h2>
+            </div>
+        </div>
+    </div>
+    <script >
+        function calcular() {
+            var radio = parseFloat(document.getElementById("radio").value);
+            var h2area = document.getElementById("area");
+            var h2volumen = document.getElementById("volumen");
+            var area = 4*Math.PI*Math.pow(radio,2);
+            var volumen =(4*Math.PI*Math.pow(radio,3))/3;
+            h2area.innerText = "Área: "+area;
+            h2volumen.innerText = "Volumen: "+volumen;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="jumbotron">
+  <h1 class="text-center">RECTÁNGULO</h1>
+  <p class="text-center"><img src="https://www.neurochispas.com/wp-content/uploads/2021/03/propiedades-de-los-rectangulos.png" width="350" height="250"class="mx-auto" alt="Placeholder image"><br> El rectángulo es una figura formada por 4 rectas llamadas lados. Las características de los rectángulos son que sus lados opuestos son paralelos y sus 4 ángulos miden 90º. </p>
+  <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">ATRÁS</a></p>
+  
+  <div>
+    <div class="input-group input-group-lg"><span id="addon1" class="input-group-addon">Base:</span>
+      <input id="base" type="text" class="form-control" placeholder="Escribe una base" aria-describedby="addon1">
+    </div><br>
+    <div class="input-group input-group-lg"><span id="addon2" class="input-group-addon">Altura:</span>
+      <input id="altura" type="text" class="form-control" placeholder="Escribe una altura" aria-describedby="addon1">
+    </div><br>
+    
+  <button onClick="calcular()" type="button" class="btn btn-lg btn-success btn-block" >CALCULAR</button>
+   <h2 id="area">Área:</h2>
+	  <h2 id="perimetro">Perímetro:</h2>
+  </div>
+    
+</div>
+ 
+<script>
+  function calcular() {
+	  var base=parseFloat(document.getElementById("base").value);
+      var altura=parseFloat(document.getElementById("altura").value);
+	  var perimetro= 2*(base+altura);
+	  var area=base*altura;
+      var h2area=document.getElementById("area");
+	  var h2perimetro=document.getElementById("perimetro");
+	  h2area.innerText="Área:"+area;
+	  h2perimetro.innerText="Perímetro:"+perimetro;
+  }
+  
+  </script>
+</body>
+
+</html>
